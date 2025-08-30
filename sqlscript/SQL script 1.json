@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "-- Sample query with OPENROWSET\n-- This needs a pointer to the file location, format of the file\n\nSELECT * \nFROM\nOPENROWSET\n(\n    BULK 'https://mysnapsestorage01.dfs.core.windows.net/mycontainer/datafolder/profile.csv',\n    FORMAT = 'CSV',\n    PARSER_VERSION = '2.0',\n    HEADER_ROW = TRUE\n)\n\nAS [result]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

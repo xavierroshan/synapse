@@ -1,5 +1,5 @@
 {
-	"name": "openrowset_sample",
+	"name": "open_csv_on_serverless_sqlpool",
 	"properties": {
 		"folder": {
 			"name": "Learning"
